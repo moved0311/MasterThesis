@@ -1,0 +1,108 @@
+<html>
+<head>
+    <title>Extract div</title>
+    <!-- jQuery -->
+    <script src="./lib/jquery-3.3.1.min.js"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./lib/bootstrap-4.1.1/dist/css/bootstrap.css">
+    <script src="./lib/bootstrap-4.1.1/assets/js/vendor/popper.min.js"></script>
+    <script src="./lib/bootstrap-4.1.1/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="sourceCodeArea"></div>
+    <div id="download">
+      Download : <button type="button" class="btn btn-default" id="downloadHTML">HTML</button>
+                <!-- <button type="button" class="btn btn-success" id="downloadVue">Vue</button> -->
+                <button type="button" class="btn btn-default" id="downloadPreformat">Pre-format</button>
+                <button type="button" class="btn btn-default" id="downloadAngular">Angular Component</button>
+                <button type="button" class="btn btn-default" id="downloadReact">React Component</button>
+                <button type="button" class="btn btn-default" id="downloadVue">Vue Component</button>
+    </div>
+
+    <!-- bootstrap popup -->
+    <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title"><b>Selected Element Name : </b><span id="ElementName">Popup title</span></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body" id="popupBody">
+                <!-- 1. Element Value -->
+                <div id="elementValue"><b>Element Value</b> : <input id="popupInput" class="form-control"></div>
+                <!-- 2. Label  -->
+                <div>
+                    <b>Label:</b>
+                    <select class="custom-select" id="labelSelected">
+                        <option value="none" selected>Select a label</option>
+                        <option value="jt-v">Variable</option>
+                        <option value="jt-ul">UL template</option>
+                        <!-- <option value="jt-for">For Loop</option> -->
+                        <!-- <option value="jt-slot">Slot</option> -->
+                    </select>
+                </div>
+                <!-- 3. Attribute -->
+                <div>
+                    <b>Attribute:</b>
+                    <div id="attr-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" id="">Name & Value</span>
+                            </div>
+                            <input type="text" class="form-control">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>  
+                    <button id="subAttr" type="button" class="btn btn-outline-dark float-right" style="width:37px">-</button>
+                    <button id="addAttr" type="button" class="btn btn-outline-dark float-right" style="">+</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" id="save" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- modal : save component's name. -->
+    <div id="componentNameModal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                    <b>Component's name</b> : <input type="text" id="CName" class="form-control">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="componentNameModalSave" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- here can't pup script : security issue -->
+    <!-- https://stackoverflow.com/questions/16145522/chrome-showing-error-as-refused-to-execute-inline-script-because-of-content-sec -->
+    <script src="./showCode.js"></script>
+    <script src="./preformat.js"></script>
+    <script src="./lib/htmltojsx.js"></script>
+</body>
+</html>
+
+<style>
+#sourceCodeArea{
+    /* border: 2px solid black; */
+    /* height:500px; */
+}
+#download{
+    margin-top: 5px;
+}
+#sourceCodeArea > div:first-of-type{
+    border: 2px solid black;
+}
+</style>

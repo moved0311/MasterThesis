@@ -1,0 +1,13 @@
+{
+   "browser_action": {
+      "default_popup": "popup.html"
+   },
+   "description": "DOM tree visualization",
+   "manifest_version": 2,
+   "icons": {
+      "16": "icon16.png"
+   },
+   "name": "DOM tree visualization",
+   "permissions": [ "activeTab" ],
+   "version": "1.0"
+}
