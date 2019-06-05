@@ -1,0 +1,10 @@
+#container-binarySearch {
+    position: relative;
+  }
+.jsavcounter {
+    position: absolute;
+    top: 15px;
+  }
+.jsavoutput{
+    height: 100px;;
+}

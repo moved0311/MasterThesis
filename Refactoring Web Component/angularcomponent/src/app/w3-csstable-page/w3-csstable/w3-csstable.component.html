@@ -1,0 +1,11 @@
+<table id="customers">
+  <tr>
+    <th *ngFor="let header of theader">{{header}}</th>
+  </tr>
+  <tr *ngFor="let obj of in_data">
+    <td>{{obj.Company}}</td>
+    <td>{{obj.Contact}}</td>
+    <td>{{obj.Country}}</td>
+  </tr>
+</table>
+

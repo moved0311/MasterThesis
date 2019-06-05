@@ -1,0 +1,23 @@
+table, td, th{ 
+    border-collapse: collapse;
+    border: 1px solid black;
+  }
+  input{
+    width: 150px;
+  }
+  .layer1{
+    padding-left: 15px;
+  }
+  .layer2{
+    padding-left: 30px;
+  }
+  .layer3{
+    padding-left: 45px;
+  }
+  .layer4{
+    padding-left: 60px;
+  }
+.close{
+  margin-top: 5px;
+  padding: 5px;
+}

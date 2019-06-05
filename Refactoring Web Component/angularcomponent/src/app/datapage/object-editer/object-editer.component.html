@@ -1,0 +1,16 @@
+<table id="objectEditor">
+  <tr>
+    <th>Key</th>
+    <th>Value</th>
+  </tr>
+  <tr *ngFor="let item of parseData" class="dataRow">
+    <td><input type="text" value="{{item.key}}"></td>
+    <td><input type="text" value="{{item.value}}">
+        <button type="button" class="close" aria-label="Close" (click)="close($event)">
+            <span aria-hidden="true" class="">&times;</span>
+        </button>
+    </td>
+  </tr>
+</table>
+<button type="button" class="btn btn-primary" (click)="add($event)">Add</button>
+<button type="button" class="btn btn-success">Save</button>

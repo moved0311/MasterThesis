@@ -1,0 +1,13 @@
+/* @import url("https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"); */
+
+#zipcodemap, #citymap {
+    /* position: absolute; top:0; bottom:0; right:0; left:180; */
+    height: 500px;
+    width: 1000px;
+}
+div.leaflet-popup{
+    width: 300px;
+}
+div.leaflet-control-zoom.leaflet-bar.leaflet-control{
+    width: 30px;
+}
